@@ -1,0 +1,46 @@
+# POST: Criação de um novo vídeo
+POST http://localhost:3333/videos
+Content-Type: application/json
+
+{
+    "titulo": "Video 01 node",
+    "descricao": "Esse é o primeiro video",
+    "duracao": 180
+}
+
+###
+
+# GET: Lista todos os vídeos
+GET http://localhost:3333/videos
+
+###
+
+# GET: Lista todos os vídeos com a palavra "node"
+GET http://localhost:3333/videos?search=node
+
+###
+
+# PUT: Atualiza o vídeo com ID 1
+PUT http://localhost:3333/videos/1
+Content-Type: application/json
+
+{
+    "titulo": "Video 01 Atualizado",
+    "descricao": "Essa é a versão atualizada do primeiro video",
+    "duracao": 200
+}
+
+###
+
+# DELETE: Remove o vídeo com ID 1
+DELETE http://localhost:3333/videos/1
+
+###
+
+# PATCH: Atualiza parcialmente o vídeo com ID 1
+PATCH http://localhost:3333/videos/1
+Content-Type: application/json
+
+{
+    "titulo": "Video 01 Parcialmente Atualizado"
+}
